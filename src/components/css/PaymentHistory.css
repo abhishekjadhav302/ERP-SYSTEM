@@ -1,0 +1,60 @@
+.payment-history-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 120px;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically */
+    min-height: 100vh;
+    /* Ensure full viewport height */
+    padding: 20px;
+}
+
+.payment-history-page h2 {
+    margin-bottom: 20px;
+    /* Add gap between the title and the list */
+    font-size: 2rem;
+    /* Optional: Adjust title size */
+    font-weight: bold;
+    /* Optional: Make the title bold */
+    color: #333;
+    /* Optional: Adjust title color */
+}
+
+.payment-history-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping of items */
+    justify-content: center;
+    /* Center items horizontally */
+    gap: 20px;
+    max-height: 500px;
+    /* Limit the height of the container */
+    overflow-y: auto;
+    /* Vertical scroll when content overflows */
+    padding-right: 20px;
+    /* Ensure scrollbar is not hidden */
+}
+
+.payment-history-item {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 300px;
+    /* Ensure each item has a minimum width */
+    max-width: 350px;
+    /* Optional: Max width for each item */
+}
+
+.payment-history-item p {
+    margin: 5px 0;
+}
+
+.payment-history-item strong {
+    font-weight: bold;
+}

@@ -1,0 +1,125 @@
+/* Main Body */
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    overflow: hidden;
+}
+
+/* Container Styling */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    opacity: 100%;
+    animation: fadeIn 1s ease-out forwards;
+    position: relative;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Login Title */
+.login-title {
+    font-size: 26px;
+    color: #8085e5;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: bounceIn 1.5s ease;
+}
+
+/* Bounce-in Effect */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Input Fields */
+.login-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #4e54c8;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login-input:focus {
+    border-bottom-color: #8f94fb;
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background: #4e54c8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    background-color: #8f94fb;
+}
+
+/* Subtle Floating Effect */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.login-container:hover {
+    animation: float 3s ease-in-out infinite;
+}

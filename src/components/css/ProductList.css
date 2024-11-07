@@ -1,0 +1,76 @@
+/* ProductList.css */
+
+.product-list {
+    display: inline-flex;
+    margin: -75px 0px 0px 0px;
+    flex-wrap: wrap;
+    gap: 67px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Card styling */
+.product-card {
+    width: 245px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeInUp 0.5s ease forwards;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Content styling */
+.product-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0.3rem 0;
+}
+
+.add-to-card-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-to-card-btn:hover {
+    background-color: #357abd;
+    transform: scale(1.05);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

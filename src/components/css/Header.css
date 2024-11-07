@@ -1,0 +1,167 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body padding to avoid content hiding behind the fixed header */
+body {
+    padding-top: 70px;
+    /* Adjust this to match the header's height */
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+}
+
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0px;
+    width: 100vw;
+    /* Full viewport width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Logo section */
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+/* Search bar styles */
+.header-search {
+    display: flex;
+    align-items: center;
+    background-color: #34495e;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-input {
+    width: 200px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-size: 0.9rem;
+    transition: width 0.3s ease;
+}
+
+.search-input:focus {
+    width: 250px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+}
+
+/* Login button styles */
+.login-button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Sidebar styling */
+.sidebar {
+    position: fixed;
+    top: 70px;
+    /* Adjust to match header height */
+    left: 0;
+    width: 200px;
+    height: calc(100% - 60px);
+    /* Fill the height below the header */
+    background-color: #a8de81;
+    color: #ecf0f1;
+    padding-top: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-links {
+    display: flex;
+    padding-left: 40px;
+    margin-top: 30px;
+    margin-right: 55px;
+    flex-direction: column;
+}
+
+.sidebar-link {
+    padding: 15px 20px;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-link:hover {
+    background-color: #a8de81;
+}
+
+/* Content area styling */
+.content {
+    margin-left: 220px;
+    /* Adjust based on sidebar width */
+    padding: 20px;
+}
+.admin-btn{
+    display: flex;
+        margin-top: 25rem;
+        margin-right: 55px;
+        flex-direction: column;
+}
+.admin-btn{
+        padding: 15px 20px;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+}
+.admin-btn:hover {
+    background-color: #2c3e50;
+}
