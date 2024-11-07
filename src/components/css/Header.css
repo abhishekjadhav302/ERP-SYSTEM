@@ -114,7 +114,7 @@ body {
     width: 200px;
     height: calc(100% - 60px);
     /* Fill the height below the header */
-    background-color: #a8de81;
+    background-color: #00000061;
     color: #ecf0f1;
     padding-top: 20px;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
