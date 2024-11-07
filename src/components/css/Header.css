@@ -27,7 +27,7 @@ body {
     padding: 10px 20px;
     background-color: #ffb20099;
     color: #ecf0f1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px #0000001a;
     z-index: 1000;
 }
 
