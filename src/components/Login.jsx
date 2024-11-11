@@ -11,11 +11,14 @@ const Login = () => {
   const handleLogin = () => {
     // Check if credentials match the allowed admin credentials
     if (email === "abhishekjadhav0701@gmail.com" && password === "Abhi@123") {
+      // here i use local storage to set admin authentication
+      localStorage.setItem("isAdminAuthenticated", "true");
+
       // Clear error and navigate to the admin page or perform any success actions
       setErrorMessage("");
       alert("Login successful! Navigating to admin dashboard...");
       // Perform navigation if needed, e.g. navigate("/admin-dashboard");
-      navigate("/admin/home");
+      // navigate("/admin/product-list");
       navigate("/admin/Navbar");
     } else {
       // Set an error message if credentials are incorrect

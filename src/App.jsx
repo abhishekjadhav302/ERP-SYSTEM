@@ -1,6 +1,10 @@
-// src/App.jsx
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Header from "./components/Header";
 import ProductList from "./components/ProductList";
 import StaffCard from "./components/StaffCard";
@@ -11,9 +15,12 @@ import Navbar from "./admin/src/components/Navbar";
 import Home from "./admin/src/components/Home";
 import NotificationStaff from "./components/NotificationStaff";
 import Notification from "./admin/src/components/Notification";
-// import ProductList from "./admin/src/components/ProductList";
+import ProductForm from "./admin/src/components/ProductForm";
+import Admin_ProductList from "./admin/src/components/Admin_ProductList";
 import StaffDetails from "./admin/src/components/StaffDetails";
 import EditProductForm from "./admin/src/components/EditProductForm";
+import PrivateRoute from "./components/PrivateRoute";
+import "./admin/src/css/Home.css";
 
 function App() {
   return (
@@ -27,12 +34,64 @@ function App() {
         <Route path="/payment-history" element={<PaymentHistory />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/notification" element={<NotificationStaff />} />
-        <Route path="/admin/Home.jsx" element={<Home />} />
-        <Route path="/admin/Navbar" element={<Navbar />} />
-        <Route path="/admin/Notification" element={<Notification />} />
-        <Route path="/admin/StaffDetails" element={<StaffDetails />} />
-        <Route path="/admin/EditProductForm" element={<EditProductForm />} />
-        {/* <Route path="/admin/ProductList" element={<ProductList />} /> */}
+
+        {/* Admin Routes */}
+        <Route
+          path="/admin"
+          element={
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/Navbar"
+          element={
+            <PrivateRoute>
+              <Navbar />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/Notification"
+          element={
+            <PrivateRoute>
+              <Notification />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/staff-details"
+          element={
+            <PrivateRoute>
+              <StaffDetails />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/ProductForm"
+          element={
+            <PrivateRoute>
+              <ProductForm />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/EditProductForm"
+          element={
+            <PrivateRoute>
+              <EditProductForm />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/Admin_ProductList"
+          element={
+            <PrivateRoute>
+              <Admin_ProductList />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </Router>
   );

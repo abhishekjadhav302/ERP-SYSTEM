@@ -5,7 +5,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import StaffDetails from "./components/StaffDetails";
-import ProductList from "./components/ProductList";
+import Admin_ProductList from "./components/Admin_ProductList";
 import ProductForm from "./components/ProductForm";
 import EditProductForm from "./components/EditProductForm";
 import Notification from "./components/Notification";
@@ -37,7 +37,9 @@ function App() {
           />
           <Route
             path="/product-list"
-            element={<ProductList setSelectedProduct={setSelectedProduct} />}
+            element={
+              <Admin_ProductList setSelectedProduct={setSelectedProduct} />
+            }
           />
         </Routes>
       </div>

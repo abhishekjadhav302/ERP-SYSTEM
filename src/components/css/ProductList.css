@@ -2,7 +2,7 @@
 
 .product-list {
     display: inline-flex;
-    margin: -75px 0px 0px 0px;
+    margin: -48px 0px 0px 150px;
     flex-wrap: wrap;
     gap: 67px;
     justify-content: center;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { db, collection, getDocs, deleteDoc, doc } from "../firebase";
 
-const ProductList = () => {
+const Admin_ProductList = () => {
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
@@ -38,4 +38,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default Admin_ProductList;
