@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import "./css/Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleLogin = () => {
     // Check if credentials match the allowed admin credentials
@@ -19,7 +19,7 @@ const Login = () => {
       alert("Login successful! Navigating to admin dashboard...");
       // Perform navigation if needed, e.g. navigate("/admin-dashboard");
       // navigate("/admin/product-list");
-      navigate("/admin/Navbar");
+      // navigate();
     } else {
       // Set an error message if credentials are incorrect
       setErrorMessage("Invalid email or password. Please try again.");
@@ -46,7 +46,7 @@ const Login = () => {
         required
       />
       <button className="login-button" onClick={handleLogin}>
-        Login
+        <a href="https://admin-erp-system.vercel.app/">login</a>
       </button>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
     </div>
